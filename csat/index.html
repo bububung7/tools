@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1d2b24">
+<title>수능 이후 21일 플래너 | 시선기록자</title>
+<meta name="description" content="수능 끝, 성적 발표까지 21일. 입시 일정 체크리스트와 수험표 할인 혜택을 한 번에.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fdf8ec; --glass:rgba(252,247,234,.86); --line:rgba(176,138,62,.22);
+  --gold:#b08a3e; --gold-d:#8a6526; --ink:#3a3427; --muted:#7a6f5a; --green:#5a7a4c;
+  --serif:'Gowun Batang','Nanum Myeongjo',serif; --sans:'Gowun Dodum','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --hand:'Nanum Pen Script',cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:var(--sans);color:var(--ink);background:#1d2b24;min-height:100vh;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:#1d2b24 url(daisy.webp) center/cover no-repeat}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,32,26,.55) 0%,rgba(18,32,26,.25) 35%,rgba(18,32,26,.45) 100%)}
+.wrap{max-width:560px;margin:auto;padding:30px 16px 70px}
+
+/* ---------- header ---------- */
+.top{text-align:center;color:#fff}
+.ornament{width:150px;height:34px;display:block;margin:0 auto 6px}
+h1{font-family:var(--serif);font-weight:700;font-size:31px;letter-spacing:.02em;margin:0;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.by{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px;font-family:var(--serif);font-size:14px;letter-spacing:.15em;color:#f3ead4;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.by::before,.by::after{content:"";width:46px;height:1px;background:rgba(243,234,212,.8)}
+
+/* ---------- D-day plaque ---------- */
+.plaque-wrap{position:relative;margin:30px 8px 46px}
+.plaque{position:relative;text-align:center;padding:26px 20px 30px;border-radius:46px;
+  background:radial-gradient(ellipse at 50% 30%,#fffdf6 0%,#f8efd9 75%);
+  border:2px solid #d9bd7c;box-shadow:0 0 0 6px rgba(253,248,236,.55),0 0 0 7px rgba(217,189,124,.7),0 18px 40px rgba(0,0,0,.35)}
+.plaque .label{font-family:var(--serif);font-weight:700;font-size:21px;color:#3d3528;letter-spacing:.04em}
+.dday{font-family:var(--serif);font-weight:700;font-size:78px;line-height:1.05;margin:4px 0 2px;letter-spacing:-.01em;
+  background:linear-gradient(180deg,#e2c27a 0%,#b8893a 45%,#8a6526 70%,#c9a24f 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(255,255,255,.7))}
+.plaque .date{font-family:var(--serif);font-size:19px;letter-spacing:.18em;color:#4a4132}
+.spark{position:absolute;color:#d4ae5c;font-size:18px}
+.bow{position:absolute;left:50%;bottom:-40px;width:120px;transform:translateX(-50%);filter:drop-shadow(0 4px 6px rgba(0,0,0,.25))}
+.deco{position:absolute;pointer-events:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
+.intro{text-align:center;color:#f6efdc;font-size:14.5px;line-height:1.75;margin:0 6px 6px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.period{display:block;width:max-content;max-width:100%;margin:12px auto 0;padding:8px 15px;border-radius:30px;background:rgba(253,248,236,.18);border:1px solid rgba(253,248,236,.45);color:#fff;font-size:13px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+/* ---------- cards ---------- */
+.card{position:relative;background:var(--glass);backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(14px) saturate(1.1);
+  border:1px solid rgba(255,255,255,.75);border-radius:26px;padding:22px 22px 20px;margin:18px 0;
+  box-shadow:0 12px 32px rgba(8,20,14,.35),inset 0 1px 0 #fff}
+.card h2{font-family:var(--serif);font-weight:700;font-size:20px;margin:0 0 16px;display:flex;align-items:center;gap:11px}
+.card h2 .t{position:relative;padding-bottom:5px}
+.card h2 .t::after{content:"";position:absolute;left:-2px;right:-26px;bottom:-1px;height:4px;border-radius:4px;background:linear-gradient(90deg,#d8b45e,rgba(216,180,94,.15))}
+.ico{width:26px;height:26px;flex:none;stroke:#4a4132;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.note{color:var(--muted);font-size:12.5px;line-height:1.7;margin:12px 0 0}
+details.card>summary{list-style:none;cursor:pointer}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary h2{margin:0}
+details.card[open]>summary h2{margin-bottom:10px}
+.chev{margin-left:auto;width:18px;height:18px;stroke:#6b604b;fill:none;stroke-width:1.8;transition:transform .2s}
+details.card:not([open]) .chev{transform:rotate(-90deg)}
+
+/* schedule */
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.date{border-radius:16px;background:rgba(255,255,255,.7);border:1px solid var(--line);padding:13px 14px}
+.date small{display:block;color:var(--muted);font-size:12px;margin-bottom:5px}
+.date b{display:block;font-family:var(--serif);font-size:16px;color:#3a3427}
+.date.key{background:linear-gradient(135deg,#fff7df,#f5e6bd);border-color:#dcc07e}
+.warn{margin-top:14px;border-radius:14px;background:rgba(255,241,214,.85);border:1px dashed #d6ad5b;padding:13px 14px;font-size:13px;line-height:1.7;color:#5e4a22}
+
+/* progress */
+.prog-head{display:flex;justify-content:space-between;align-items:baseline}
+.prog-head b{font-family:var(--serif);font-size:16px}
+.prog-head span{font-size:13px;color:var(--muted)}
+.progress{height:10px;border-radius:10px;background:rgba(176,138,62,.15);overflow:hidden;margin:11px 0 4px}
+.bar{height:100%;width:0;border-radius:10px;background:linear-gradient(90deg,#d9bb6d,#a9822f);transition:width .3s}
+.cheer{font-family:var(--hand);font-size:22px;color:var(--gold-d);margin:6px 0 0}
+
+/* tasks */
+.task{display:flex;gap:13px;align-items:flex-start;padding:12px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+.task:last-child{border-bottom:none}
+.task input{appearance:none;-webkit-appearance:none;flex:none;width:24px;height:24px;border-radius:50%;border:1.6px solid #6f6550;background:rgba(255,255,255,.6);margin:1px 0 0;cursor:pointer;transition:.15s}
+.task input:checked{background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;border-color:var(--green)}
+.task input:focus-visible{outline:3px solid #d8b45e;outline-offset:2px}
+.task .title{font-size:15.5px;line-height:1.5;color:#2f2a20}
+.task .desc{font-size:12.5px;line-height:1.6;color:var(--muted);margin-top:3px}
+.task.done .title{text-decoration:line-through;text-decoration-color:#b08a3e;color:#9a8f78}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.btn{cursor:pointer;font:inherit;font-size:13px;border:1px solid #d6c08c;background:rgba(255,255,255,.75);color:#4a4132;border-radius:30px;padding:10px 15px}
+.btn:hover{background:#fff}
+.btn.main{background:linear-gradient(180deg,#c9a24f,#a57d2f);border-color:#a57d2f;color:#fff}
+
+/* memo */
+.paper{position:relative;margin-top:6px;padding:20px 16px 10px;background:#fffdf5;border-radius:4px;
+  box-shadow:0 3px 10px rgba(60,45,20,.15);transform:rotate(-.6deg);
+  background-image:repeating-linear-gradient(transparent 0 33px,rgba(176,138,62,.18) 33px 34px)}
+.paper::before{content:"";position:absolute;top:-12px;left:18px;width:80px;height:24px;background:rgba(222,196,140,.75);transform:rotate(-14deg);box-shadow:0 1px 2px rgba(0,0,0,.1)}
+textarea{display:block;width:100%;min-height:150px;border:0;background:transparent;resize:vertical;outline:none;
+  font-family:var(--hand);font-size:24px;line-height:34px;color:#3b3226;padding:0}
+textarea::placeholder{color:#a69a80}
+
+/* benefits */
+.dealbar{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.chip{cursor:pointer;font:inherit;display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 4px 9px;border-radius:18px;border:1px solid #e3cf9e;
+  background:linear-gradient(180deg,#fffaf0,#f6ebcf);color:#4a4132;font-size:12.5px;box-shadow:0 3px 8px rgba(120,90,30,.12)}
+.chip svg{width:24px;height:24px;stroke:#4a4132;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.chip.active{background:linear-gradient(180deg,#c9a24f,#a57d2f);border-color:#a57d2f;color:#fff}
+.chip.active svg{stroke:#fff}
+.deal-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.deal{border:1px solid var(--line);border-radius:18px;padding:14px;background:rgba(255,255,255,.72);display:flex;flex-direction:column;gap:6px}
+.deal[hidden]{display:none!important}
+.deal .category{font-size:11.5px;color:var(--muted)}
+.deal strong{font-family:var(--serif);font-size:16px;color:#2f2a20}
+.deal .benefit{font-size:14px;color:var(--gold-d);font-weight:700}
+.deal p{font-size:12px;color:#6c624f;line-height:1.6;margin:0;flex:1}
+.deal .end{align-self:flex-start;border-radius:20px;padding:3px 9px;font-size:11px;background:#f2ead6;color:#6b5a32}
+.deal .end.urgent{background:#f9e0d6;color:#a8452c}
+.deal a{text-align:center;text-decoration:none;font-size:12px;color:#fff;padding:10px;border-radius:12px;background:#3f5a46}
+.deal a:hover{background:#2f4736}
+.deal a:focus-visible,.chip:focus-visible,.btn:focus-visible{outline:3px solid #d8b45e;outline-offset:2px}
+.guide{margin-top:14px;border-radius:14px;background:rgba(255,248,230,.85);padding:13px 14px;font-size:12.5px;line-height:1.75;color:#5a4f3a}
+
+.letter p{font-size:14.5px;line-height:1.9;margin:0}
+.letter .sign{font-family:var(--hand);font-size:24px;color:var(--gold-d);text-align:right;margin-top:6px}
+footer{text-align:center;color:#efe6cf;font-size:12px;line-height:1.85;margin-top:28px;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+footer b{font-family:var(--serif)}
+
+@media (max-width:420px){
+  h1{font-size:26px}.dday{font-size:66px}.plaque .label{font-size:19px}
+  .card{padding:20px 17px 18px}.deal-list{grid-template-columns:1fr}
+  .dealbar{gap:5px}.chip{font-size:11.5px;border-radius:15px}
+}
+@media print{
+  body::before,body::after{display:none}body{background:#fff}
+  .card{box-shadow:none;background:#fff;backdrop-filter:none;break-inside:avoid;border:1px solid #ddd}
+  .tools,.dealbar,.deco,.bow{display:none}.top,.intro,footer{color:#333;text-shadow:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="dc" cx="40%" cy="35%"><stop offset="0" stop-color="#ffd85a"/><stop offset=".7" stop-color="#e7a91c"/><stop offset="1" stop-color="#c98a12"/></radialGradient>
+    <symbol id="daisy" viewBox="-50 -50 100 100">
+      <g fill="#fffdf7" stroke="#e6dcc3" stroke-width=".7">
+        <ellipse rx="7" ry="20" cy="-25"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(24)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(48)"/>
+        <ellipse rx="7" ry="20" cy="-25" transform="rotate(72)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(96)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(120)"/>
+        <ellipse rx="7" ry="20" cy="-25" transform="rotate(144)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(168)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(192)"/>
+        <ellipse rx="7" ry="20" cy="-25" transform="rotate(216)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(240)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(264)"/>
+        <ellipse rx="7" ry="20" cy="-25" transform="rotate(288)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(312)"/><ellipse rx="7" ry="20" cy="-25" transform="rotate(336)"/>
+      </g>
+      <circle r="13" fill="url(#dc)"/>
+    </symbol>
+    <symbol id="leaf" viewBox="0 0 40 20"><path d="M2 10 C12 0, 28 0, 38 10 C28 20, 12 20, 2 10Z" fill="#8fa86b"/><path d="M4 10 H36" stroke="#6d8a4f" stroke-width=".8"/></symbol>
+  </defs>
+</svg>
+
+<main class="wrap">
+  <header class="top">
+    <svg class="ornament" viewBox="0 0 150 34" aria-hidden="true">
+      <path d="M8 18 Q40 8 62 17" stroke="#c9d6b0" stroke-width="1.4" fill="none"/><path d="M142 18 Q110 8 88 17" stroke="#c9d6b0" stroke-width="1.4" fill="none"/>
+      <use href="#leaf" x="22" y="6" width="16" height="8" transform="rotate(-20 30 10)"/><use href="#leaf" x="40" y="14" width="16" height="8" transform="rotate(15 48 18)"/>
+      <use href="#leaf" x="112" y="6" width="16" height="8" transform="rotate(20 120 10)"/><use href="#leaf" x="94" y="14" width="16" height="8" transform="rotate(-15 102 18)"/>
+      <use href="#daisy" x="58" y="0" width="34" height="34"/>
+    </svg>
+    <h1>수능 이후 21일 플래너</h1>
+    <div class="by">시선기록자</div>
+  </header>
+
+  <div class="plaque-wrap">
+    <svg class="deco" style="left:-22px;top:-30px;width:86px;height:86px" aria-hidden="true"><use href="#daisy"/></svg>
+    <svg class="deco" style="left:44px;top:-14px;width:40px;height:40px" aria-hidden="true"><use href="#daisy"/></svg>
+    <div class="plaque">
+      <span class="spark" style="left:16%;top:46%">✦</span><span class="spark" style="right:15%;top:40%">✦</span><span class="spark" style="right:19%;top:56%;font-size:12px">✦</span>
+      <div class="label" id="ddLabel">성적 발표까지</div>
+      <div class="dday" id="dday">D-21</div>
+      <div class="date">2026.12.11</div>
+    </div>
+    <svg class="deco" style="right:-20px;bottom:-6px;width:96px;height:96px" aria-hidden="true"><use href="#daisy"/></svg>
+    <svg class="bow" viewBox="0 0 120 60" aria-hidden="true">
+      <path d="M60 22 C40 2, 8 4, 14 22 C20 38, 46 32, 60 22Z" fill="#f6ead0" stroke="#cfae68" stroke-width="1.5"/>
+      <path d="M60 22 C80 2, 112 4, 106 22 C100 38, 74 32, 60 22Z" fill="#f6ead0" stroke="#cfae68" stroke-width="1.5"/>
+      <path d="M56 26 L40 58 L48 54 L52 60 L60 28Z" fill="#f2e3c2" stroke="#cfae68" stroke-width="1.3"/>
+      <path d="M64 26 L80 58 L72 54 L68 60 L60 28Z" fill="#f2e3c2" stroke="#cfae68" stroke-width="1.3"/>
+      <ellipse cx="60" cy="23" rx="8" ry="7" fill="#f8eed6" stroke="#cfae68" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <p class="intro">쉬는 것도 계획이다.<br>입시에서 놓치면 안 되는 일정은 챙기고,<br>하고 싶었던 일도 하나씩 해보자.</p>
+  <span class="period">📅 2026.11.20 ~ 12.10 · 성적 통지 12.11</span>
+
+  <section class="card">
+    <h2><svg class="ico" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span class="t">꼭 알아야 할 2027학년도 일정</span></h2>
+    <div class="dates">
+      <div class="date key"><small>수능 성적 통지</small><b>12월 11일 (금)</b></div>
+      <div class="date"><small>수시 합격자 발표 마감</small><b>12월 18일 (금)</b></div>
+      <div class="date"><small>수시 최초 등록</small><b>12월 21~23일</b></div>
+      <div class="date"><small>정시 원서접수 기간</small><b>2027년 1월 4~7일</b></div>
+    </div>
+    <p class="note">정시 원서접수는 대학별로 위 기간 중 3일 이상 진행한다. 면접·논술 일정과 원서 마감시각은 대학별 모집요강이 기준이다.</p>
+    <div class="warn">⚠️ 수시에 합격한 경우 등록하지 않아도 일반적으로 정시·추가모집 지원이 제한된다. 예비번호·충원합격도 포함될 수 있으므로, 지원 전 해당 전형의 적용 규정을 반드시 확인하자.</div>
+  </section>
+
+  <section class="card">
+    <div class="prog-head"><b>나의 21일 진행도</b><span id="counter" aria-live="polite">0 / 10개 완료</span></div>
+    <div class="progress"><div class="bar" id="bar"></div></div>
+    <p class="cheer" id="cheer">조급해하지 말고, 오늘 하나씩.</p>
+  </section>
+
+  <details class="card" open>
+    <summary><h2><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="16.5" rx="2.5"/><path d="M9 3.5h6v3H9zM9 13l2.2 2.2L15.5 11"/></svg><span class="t">꼭 해야 할 일</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></h2></summary>
+    <div id="must"></div>
+  </details>
+
+  <details class="card" open>
+    <summary><h2><svg class="ico" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><span class="t">하면 좋은 일</span><svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></h2></summary>
+    <div id="optional"></div>
+  </details>
+
+  <section class="card">
+    <div class="tools">
+      <button class="btn main" id="copy">내 체크리스트 복사</button>
+      <button class="btn" id="reset">체크 초기화</button>
+      <button class="btn" onclick="window.print()">인쇄 / PDF 저장</button>
+    </div>
+    <p class="note">체크 내역과 메모는 지금 쓰는 브라우저에만 저장된다. 기기나 브라우저를 바꾸면 동기화되지 않는다.</p>
+  </section>
+
+  <section class="card">
+    <h2><svg class="ico" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 013 3L8 18.5z"/><path d="M14.5 6l3 3"/></svg><span class="t">나만의 21일 계획</span></h2>
+    <div class="paper"><textarea id="memo" placeholder="11/23 면접 예상 질문 정리&#10;11/28 친구 만나기&#10;12/1 최종 정답 확인 ♡" aria-label="계획 메모"></textarea></div>
+    <p class="note">이름, 수험번호, 성적 등 민감한 개인정보는 적지 않는 편이 안전하다.</p>
+  </section>
+
+  <section class="card" id="benefits">
+    <h2><svg class="ico" viewBox="0 0 24 24"><path d="M3.5 12.5V4.5h8l9 9-8 8z"/><circle cx="8" cy="9" r="1.6"/></svg><span class="t">수험표 혜택</span></h2>
+    <p class="note" style="margin:-4px 0 14px">2026.11.20 확인한 공식 행사 및 보도 기준. 금액은 수험생 본인 기준이며 혜택별로 연령·기간·대상·증빙·예매 조건이 다르다. 방문 전 연결된 공지를 다시 확인하자.</p>
+    <div class="dealbar" role="group" aria-label="혜택 분야 필터">
+      <button type="button" class="chip active" data-deal-filter="all"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>전체</button>
+      <button type="button" class="chip" data-deal-filter="movie"><svg viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11" rx="1.5"/><path d="M3.5 9l15.5-4 .9 3.3M8 8l2.5-3.3M13.5 6.6L16 3.3"/></svg>영화</button>
+      <button type="button" class="chip" data-deal-filter="park"><svg viewBox="0 0 24 24"><path d="M12 3l8 5H4z"/><path d="M5 8v12M19 8v12M3.5 20.5h17M9.5 11v6M14.5 11v6"/></svg>놀이공원</button>
+      <button type="button" class="chip" data-deal-filter="trip"><svg viewBox="0 0 24 24"><path d="M21 4.5L3.5 11l6 2.5 2.5 6z"/><path d="M9.5 13.5L21 4.5"/></svg>여행</button>
+      <button type="button" class="chip" data-deal-filter="culture"><svg viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 100 17c1.2 0 1.6-1 1-2s-.2-2.5 1.5-2.5H17a3.5 3.5 0 003.5-3.5c0-5-3.8-9-8.5-9z"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="10" r="1"/></svg>문화</button>
+    </div>
+    <div class="deal-list">
+      <div class="deal" data-deal-kind="movie"><span class="category">🎬 영화 · CGV</span><strong>수능특가 영화</strong><span class="benefit">2D 일반영화 7,000원</span><span class="end urgent">11월 30일까지</span><p>13~18세 CGV 회원 쿠폰팩 제공. 만 19세 이상 적용 방식 및 대상 영화는 공식 안내에서 확인.</p><a href="https://cgv.co.kr/evt/new/2611_YouthPromo?evntNo=202610301653&amp;expnYn=N" target="_blank" rel="noopener noreferrer">CGV 공식 이벤트 확인 ↗</a></div>
+      <div class="deal" data-deal-kind="movie"><span class="category">🎬 영화 · 메가박스</span><strong>수능 끝, 봉인해제</strong><span class="benefit">영화 7,000원 행사</span><span class="end urgent">12월 2일까지 (보도 기준)</span><p>쿠폰 발급, 연령 및 N수생 현장 인증 등 조건을 확인. 행사 페이지에서 해당 이벤트를 선택.</p><a href="https://www.megabox.co.kr/event" target="_blank" rel="noopener noreferrer">메가박스 행사 확인 ↗</a></div>
+      <div class="deal" data-deal-kind="park"><span class="category">🎡 놀이공원 · 에버랜드</span><strong>수험생 종일 이용</strong><span class="benefit">20,000원</span><span class="end">12월 31일까지</span><p>스마트 예약 후 현장에서 수험생 증빙. 동반 최대 3명 우대 여부와 이용 요일도 확인.</p><a href="https://reservation.everland.com/web/el.do?method=productMain" target="_blank" rel="noopener noreferrer">에버랜드 공식 예약 ↗</a></div>
+      <div class="deal" data-deal-kind="park"><span class="category">🎠 놀이공원 · 서울랜드</span><strong>수험생 특별할인</strong><span class="benefit">20,500원</span><span class="end">공식 프로모션 기간 확인</span><p>현장 발권 혜택. 2027학년도 수험표·접수증 등 증빙 원본과 신분증 지참.</p><a href="https://seoulland.co.kr/?idx=438&amp;p=40_view" target="_blank" rel="noopener noreferrer">서울랜드 공식 혜택 ↗</a></div>
+      <div class="deal" data-deal-kind="park"><span class="category">🧱 놀이공원 · 레고랜드</span><strong>수험생 본인 40%</strong><span class="benefit">동반 최대 3명 30%</span><span class="end">12월 18일까지</span><p>현장 구매가 기준 할인. 방문 당일 현장 결제·수험표 인증 필요. 운영일 확인.</p><a href="https://www.legoland.kr/" target="_blank" rel="noopener noreferrer">레고랜드 공식 혜택 ↗</a></div>
+      <div class="deal" data-deal-kind="trip"><span class="category">✈️ 여행 · 이스타항공</span><strong>수험생 + 동반 1인</strong><span class="benefit">국내선 25%, 국제선 최대 10%</span><span class="end">12월 31일까지 예매</span><p>공식 홈페이지 예매 시 수험생 할인 선택. 노선·운임·탑승일 조건, 증빙 확인.</p><a href="https://www.eastarjet.com/" target="_blank" rel="noopener noreferrer">이스타항공 공식 사이트 ↗</a></div>
+      <div class="deal" data-deal-kind="trip"><span class="category">🚆 여행 · 철도관광</span><strong>수험생 기차여행</strong><span class="benefit">일부 철도관광상품 20% 우대</span><span class="end">12월 31일까지 (보도 기준)</span><p>일반 KTX 승차권 전체 할인과는 다르다. 대상 패키지·동반인 적용 및 예약 조건 확인.</p><a href="https://etbs.korailtravel.com/" target="_blank" rel="noopener noreferrer">코레일관광개발 상품 ↗</a></div>
+      <div class="deal" data-deal-kind="culture"><span class="category">🔭 문화 · 국립대구과학관</span><strong>수험생 + 동반 1인</strong><span class="benefit">무료입장 행사</span><span class="end">12월 31일까지</span><p>11월 20일부터 진행. 무료 적용 시설 범위 및 특별전·유료 체험 제외 여부는 현장 안내 확인.</p><a href="https://www.dnsm.or.kr/" target="_blank" rel="noopener noreferrer">국립대구과학관 공식 사이트 ↗</a></div>
+    </div>
+    <div class="guide"><b>💡 제일 먼저 챙길 것</b><br>영화 혜택은 11월 말~12월 초에 빨리 끝나는 경우가 많다. 놀이공원은 본인과 동반인 할인을 함께 비교하고, 여행은 예매기간과 실제 탑승기간을 반드시 구분하자. 수험표 원본과 신분증을 요구하는 곳이 많다.<br><br><b>참고:</b> 가격·기간은 변경될 수 있다. 할인되는 운임의 종류와 추가 수수료까지 확인한 뒤 일반 특가와 비교하는 편이 안전하다.</div>
+  </section>
+
+  <section class="card letter">
+    <h2><svg class="ico" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 6.5l8 6 8-6"/></svg><span class="t">부모님에게도 전하고 싶은 말</span></h2>
+    <p>수능 직후에는 점수 이야기를 잠시 내려놓아도 좋다. 필요한 일정만 함께 정리하고, 충분히 쉬고 싶은 마음도 존중해 주자. 가채점은 참고자료이지 최종 성적이 아니다.</p>
+    <div class="sign">수고했어, 정말로 ♡</div>
+  </section>
+
+  <footer><b>시선기록자</b> | 뉴스는 사실을 전하고, 시선은 의미를 남긴다.<br>공식 일정: 한국대학교육협의회 2027학년도 대학입학전형기본사항<br>개인용 무료 도구 · 어떠한 정보도 서버로 전송하지 않음</footer>
+</main>
+
+<script>
+const ITEMS=[['must','가채점 결과와 수능 최저 기준을 확인하기','등급컷 예측은 바뀔 수 있다. 확정 전에는 성급히 수시 시험을 포기하지 않기'],['must','수시 면접·논술·실기 일정 재확인','장소, 입실 시각, 수험표와 신분증, 준비물을 대학별 공지로 점검'],['must','수시 합격 시 정시 지원 제한 규정 이해하기','수시 합격 후 미등록도 정시 지원 제한 대상이 될 수 있음'],['must','12월 11일 성적 통지일 캘린더에 넣기','공식 성적표를 받은 후 정시 지원 전략을 확정'],['must','정시 희망 대학 3~5곳 모집요강 모으기','대학별 반영 영역·비율·가산점·군·원서 마감시각 비교'],['optional','시험 뒤 며칠은 충분히 쉬기','늦잠, 산책, 친구와의 시간 등 회복도 중요'],['optional','미뤘던 치과·안과 등 건강 일정 챙기기','몸과 수면 리듬을 천천히 회복'],['optional','관심 분야 하나 배우거나 경험하기','운전면허, 영어, 코딩, 독서 등 하고 싶었던 일 한 가지'],['optional','알바 시작 전 근로조건 확인하기','근로계약서와 최저임금, 18세 미만이면 친권자 동의·연령 증명 확인'],['optional','수험표 할인이나 여행·문화 일정 알아보기','아래 수험표 혜택 카드에서 공식 링크와 마감일 확인']];
+const KEY='sg_2027_aftercsat_v1';
+let saved={checks:{},memo:''};
+try{saved={...saved,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}};
+const $=id=>document.getElementById(id);
+
+// D-day (한국 시간 기준)
+(function(){
+  const DAY=864e5,KST=9*36e5;
+  const today=Math.floor((Date.now()+KST)/DAY);
+  const target=Math.floor((Date.UTC(2026,11,11))/DAY);
+  const d=target-today;
+  if(d>0){$('dday').textContent='D-'+d}
+  else if(d===0){$('dday').textContent='D-DAY';$('ddLabel').textContent='오늘은 성적 발표일'}
+  else{$('dday').textContent='D+'+(-d);$('ddLabel').textContent='성적 발표 이후'}
+})();
+
+const CHEERS=['조급해하지 말고, 오늘 하나씩.','좋아, 시작이 반이야.','잘하고 있어, 이 속도 그대로.','절반 넘었다! 조금만 더.','거의 다 왔어, 멋지다.','다 해냈다! 이제 푹 쉬자 ♡'];
+function render(){
+  ['must','optional'].forEach(kind=>{
+    const box=$(kind);box.innerHTML='';
+    ITEMS.forEach(([k,title,desc],i)=>{
+      if(k!==kind)return;
+      const label=document.createElement('label');label.className='task'+(saved.checks[i]?' done':'');
+      const cb=document.createElement('input');cb.type='checkbox';cb.checked=!!saved.checks[i];
+      cb.addEventListener('change',()=>{saved.checks[i]=cb.checked;save();render()});
+      const div=document.createElement('div');
+      const a=document.createElement('div');a.className='title';a.textContent=title;
+      const b=document.createElement('div');b.className='desc';b.textContent=desc;
+      div.append(a,b);label.append(cb,div);box.append(label);
+    });
+  });
+  const n=ITEMS.filter((_,i)=>saved.checks[i]).length;
+  $('counter').textContent=n+' / '+ITEMS.length+'개 완료';
+  $('bar').style.width=n/ITEMS.length*100+'%';
+  const r=n/ITEMS.length;
+  $('cheer').textContent=CHEERS[n===0?0:r<.3?1:r<.5?2:r<.8?3:r<1?4:5];
+}
+const memo=$('memo');memo.value=saved.memo||'';
+memo.addEventListener('input',()=>{saved.memo=memo.value;save()});
+$('reset').addEventListener('click',()=>{if(confirm('체크리스트만 초기화할까요? 메모는 유지됩니다.')){saved.checks={};save();render()}});
+$('copy').addEventListener('click',async()=>{
+  const text='[시선기록자 수능 이후 플래너]\n'+ITEMS.map(([k,t],i)=>(saved.checks[i]?'☑ ':'☐ ')+t).join('\n')+'\n\n[내 계획]\n'+(saved.memo||'');
+  try{await navigator.clipboard.writeText(text);alert('체크리스트를 복사했어요.')}catch(e){prompt('아래 내용을 복사하세요.',text)}
+});
+render();
+document.querySelectorAll('[data-deal-filter]').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('[data-deal-filter]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');const f=btn.dataset.dealFilter;
+  document.querySelectorAll('[data-deal-kind]').forEach(card=>{card.hidden=f!=='all'&&card.dataset.dealKind!==f});
+}));
+</script>
+</body>
+</html>
